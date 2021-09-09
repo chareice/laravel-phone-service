@@ -1,0 +1,22 @@
+{
+    "name": "chareice/laravel-login-service",
+    "description": "Login Service",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chareice",
+            "email": "chareice@live.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "laravel/framework": "^7.0 || ^8.0",
+        "chareice/laravel-verification-code": "dev-main",
+        "overtrue/wechat": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chareice\\LoginService\\": "src"
+        }
+    }
+}
