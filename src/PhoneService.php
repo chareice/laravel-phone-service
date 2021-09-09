@@ -19,9 +19,9 @@ class PhoneService implements PhoneServiceInterface
         $this->miniApp = $miniApp;
     }
 
-    public function getVerificationCode(string $phone)
+    public function getVerificationCode(string $phone) : string
     {
-        $this->codeService->setCode($phone, 60 * 30);
+        return $this->codeService->setCode($phone, 60 * 30);
     }
 
     public function verifyPhoneWithCode(string $phone, string $code)
