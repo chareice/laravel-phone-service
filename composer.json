@@ -1,5 +1,5 @@
 {
-    "name": "chareice/laravel-login-service",
+    "name": "chareice/laravel-phone-service",
     "description": "Login Service",
     "license": "MIT",
     "authors": [
@@ -9,14 +9,19 @@
         }
     ],
     "require": {
-        "php": ">=7.4",
-        "laravel/framework": "^7.0 || ^8.0",
+        "php": ">=8.0",
+        "laravel/framework": "^9.0",
         "chareice/laravel-verification-code": "dev-main",
         "overtrue/wechat": "^5.0"
     },
     "autoload": {
         "psr-4": {
-            "Chareice\\LoginService\\": "src"
+            "Chareice\\PhoneService\\": "src"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "easywechat-composer/easywechat-composer": true
         }
     }
 }

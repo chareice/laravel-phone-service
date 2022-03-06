@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Chareice\LoginService;
+namespace Chareice\PhoneService;
 
 
-use Chareice\LoginService\Contracts\PhoneService as PhoneServiceInterface;
+use Chareice\PhoneService\Contracts\PhoneService as PhoneServiceInterface;
 use Chareice\VerificationCode\VerificationCodeService;
 use EasyWeChat\MiniProgram\Application;
 
@@ -24,7 +24,7 @@ class PhoneService implements PhoneServiceInterface
         return $this->codeService->setCode($phone, 60 * 30);
     }
 
-    public function verifyPhoneWithCode(string $phone, string $code)
+    public function verifyPhoneWithCode(string $phone, string $code): bool
     {
         if (!$this->codeService->check($phone, $code)) {
             return false;
@@ -33,7 +33,7 @@ class PhoneService implements PhoneServiceInterface
         return $phone;
     }
 
-    public function getPhoneByWechat(string $code, string $iv, string $encryptData)
+    public function getPhoneByWechat(string $code, string $iv, string $encryptData): string
     {
         $sessionInfo = $this->miniApp->auth->session($code);
         $sessionKey = $sessionInfo['session_key'];

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Chareice\LoginService\Contracts;
+namespace Chareice\PhoneService\Contracts;
 
 
 interface PhoneService
