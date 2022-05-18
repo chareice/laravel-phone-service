@@ -11,8 +11,7 @@
     "require": {
         "php": ">=8.0",
         "laravel/framework": "^9.0",
-        "chareice/laravel-verification-code": "dev-main",
-        "overtrue/wechat": "^5.0"
+        "chareice/laravel-verification-code": "dev-main"
     },
     "autoload": {
         "psr-4": {
